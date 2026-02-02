@@ -39,4 +39,11 @@ let obj3= {
 let add = {...obj1, ...obj2, ...obj3}
 console.log(add);
 
+// object de-structuring
 
+let {email, firstName} = teacher; // this is object de-structuring
+console.log(firstName ,email);
+
+
+
+ 
