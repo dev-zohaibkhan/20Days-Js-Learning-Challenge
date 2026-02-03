@@ -84,6 +84,6 @@
 (function username() {
     console.log("Jus testing")
     
-})() // there is two paraentheses brackerts the first one is for function definiton and the second one is for function execution
-
+})(); // there is two paraentheses brackerts the first one is for function definiton and the second one is for function execution
+// Tip = use the statement terminator after fucntion execution in IIFE because js is not include a statment terminator by default in this method
 
