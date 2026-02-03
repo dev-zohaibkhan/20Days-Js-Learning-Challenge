@@ -50,3 +50,25 @@ function returnNums(eachNum){
 let finalVal = returnNums(nums)
 console.log(finalVal);
 
+
+// Tip = in scope the child access the parent values but the parent cannot access the child values
+
+if(true){
+    let username = "zohaib";
+    if(username === "zohaib"){
+        let website = " Facebook";
+        console.log(username + website)
+    }
+    // console.log(website); // in this case they give an error
+}
+// console.log(username); // same in this case give an error because of scope
+
+
+// Definition of Expression
+let num = function(val){ // those function which can include inside in variable is called expression
+    return val + 3
+}
+console.log(num(3));
+
+
+
