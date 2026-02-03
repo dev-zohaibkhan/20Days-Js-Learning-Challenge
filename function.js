@@ -70,5 +70,11 @@ let num = function(val){ // those function which can include inside in variable 
 }
 console.log(num(3));
 
+// Explicit mean if you can use the (return) keyword this is explicit
+// implicit mean if you cannot use the (return) keyword directly work this is implicit like below code
+
+let addNum = (num1, num2) => num1 + num2; // in this time you are not using the Parentheses brackets
+let addVal = (num3, num4) => (num3 + num4) // in this time you are using the Parantheses brackets but the output is same there is no error 
+
 
 
