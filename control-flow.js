@@ -43,3 +43,19 @@ switch(day){
         break
 
 }
+
+
+// Nullish Coslescing Operator
+let val;
+// val = 6 ?? 9; // the output is 6
+// val = null ?? 9 // the outpus is 9 because its check a safety
+val = undefined ?? 5 // the output is 5 because the first value is undefined and its check safety
+console.log(val);
+
+
+// Ternary Operator
+
+let marks = 75;
+
+marks >= 70 ? console.log("Grade A") : console.log("Grade B");
+
