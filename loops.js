@@ -40,3 +40,21 @@ for(let i= 1; i<5; i++){
     }
     console.log(`the value is ${i}`);
 }
+
+
+// print items using while loop
+
+let arr = ["books", "pens", "copies", "erasers"]
+let i = 0;
+while(i<arr.length){
+    console.log(`the arr value is ${arr[i]}`);
+    i += 1;
+}
+
+// do-while loop num print
+
+let num = 1;
+do{
+    console.log(num);
+    num++
+}while(num<=5)
