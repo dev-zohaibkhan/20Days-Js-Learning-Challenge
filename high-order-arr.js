@@ -25,7 +25,7 @@ map.set('PAK', 'Pakistan')
 map.set('In', 'India')
 map.set('AFG', 'Afghanistan')
 map.set('In', 'India')
-console.log(map);
+// console.log(map);
 
 // how can i print all the key and values of a map method using for of loop ( used of aray destructuring)
 for (const [key, values] of map) {
@@ -51,11 +51,40 @@ for (const key in array) {
 }
 
 
-// for each loop for arrays ( mostly used loop for array )
+// for each loop for arrays ( mostly used loop for array ) 
 
 let lang = ['cpp', 'python', 'html', 'css']
 lang.forEach((val) => {
-    console.log(val);
-    
+    // console.log(val);
 })
 
+// another way of printind array is a parameter and this loop have many parmateres 
+
+let para = (lang , index, arr) => {
+    // console.log(lang, index ,arr);
+}
+lang.forEach(para)
+
+// user of forEach in object inside an array
+
+let langForm = [
+    {
+        langName : "Javascript",
+        langShortcut : "Js"
+    }
+    ,
+    {
+        langName : "Python",
+        langShortcut : "Py"
+    }
+    ,
+    {
+        langName : "C plus plus",
+        langShortcut : "C++"
+    }
+]
+
+langForm.forEach((eachLang) => { // print this method for each lang name and lang shortform
+    console.log(eachLang.langName);
+    console.log(eachLang.langShortcut);
+})
