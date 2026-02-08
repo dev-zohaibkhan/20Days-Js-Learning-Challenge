@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Button Project</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            margin: 20px;
+        }
+        .container .btn{
+            border: 2px solid blue;
+            padding: 20px;
+            height: 60%;
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px blue;
+        }
+        .container .btn button{
+            display: block;
+            width: 100%;
+            padding: 10px 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 2px solid blue;
+            font-size: 18px;
+            outline: none;
+            box-shadow: 0 0 5px blue;
+        }
+        .container .btn #result{
+            padding: 20px 0;
+        }
+        .container .btn #result li{
+            list-style: none;
+            font-size: 18px;
+            padding: 5px;
+            border-bottom: 1px solid blue;
+        }
+
+    </style>
+</head>
+<body>
+    
+   <div class="container">
+     <h1>Filter Button Project</h1>
+
+    <div class="btn">
+        <button onclick="filterData('IT')">IT Book</button>
+        <button onclick="filterData('Tech')">Tech Book</button>
+        <button onclick="filterData('Social Study')">Social Study Book</button>
+        <ul id="result"></ul>
+    </div>
+   </div>
+
+    <script>
+        let btn = document.querySelector("button");        
+        bookList = [
+            {bookName : "Computer Programming", bookField : "Tech"},
+            {bookName : "Pak Study", bookField : "Social Study"},
+            {bookName : "Computer Networking", bookField : "Tech"},
+            {bookName : "Cyber Security", bookField : "Tech"},
+            {bookName : "ICT", bookField : "IT"},
+            {bookName : "Graphics Designing", bookField : "IT"},
+            {bookName : "Afg Study", bookField : "Social Study"},
+            {bookName : "Database", bookField : "IT"},
+        ]
+
+    //    btn.addEventListener("click", () => {
+    //     const result = document.getElementById("result");
+    //         result.innerHTML = "";
+    //         bookList.forEach(eachBook => {
+    //             if(eachBook.bookField === "Tech"){
+    //                 const li = document.createElement("li");
+    //                 li.textContent = eachBook.bookName;
+    //                 result.appendChild(li)
+    //             }
+    //         })
+    //    })
+       function filterData(one){
+        const result = document.getElementById("result");
+            result.innerHTML = "";
+            bookList.forEach(eachBook => {
+                if(eachBook.bookField === one){
+                    result.innerHTML += `<li>${eachBook.bookName}</li>`
+                }
+            })
+       }
+    </script>
+
+</body>
+</html>
