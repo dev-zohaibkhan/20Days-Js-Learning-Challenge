@@ -21,7 +21,7 @@ let newNumber = num.map((eachNum) => eachNum * 3).map((eachNum) => eachNum + 2).
 let initalVal = 1;
 let totalNum = num.reduce((acc, currVal) => {
     console.log(`acc is ${acc} and curr value is ${currVal}`);  
-    return acc + currVal
+    return acc + currVale
 }, initalVal)
 console.log(totalNum);
 
