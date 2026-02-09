@@ -16,6 +16,7 @@
         }
         body{
             height: 90vh;
+            overflow-x: hidden;
         }
     </style>
 </head>
@@ -24,7 +25,7 @@
     <!-- <button>Click</button> -->
 
     <script>
-        let btn = document.querySelector("button");
+        // let btn = document.querySelector("button");
         let circleMove = document.getElementById("circle");
         let body = document.querySelector("body");
 
@@ -32,6 +33,9 @@
             circleMove.style.left = `${e.clientX}px`
             circleMove.style.top = `${e.clientY}px`
         })
+
+       
+
     </script>
 </body>
 </html>
