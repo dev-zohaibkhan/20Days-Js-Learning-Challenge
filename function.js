@@ -17,7 +17,6 @@
 // let value = result(50, 60); // but this way is so beautifull from direct console.log
 // console.log(value);
 
-
 // rest operator
 // function shopingCart(...carts){ // i used a rest operator
 //     return carts
@@ -50,7 +49,6 @@
 // let finalVal = returnNums(nums)
 // console.log(finalVal);
 
-
 // Tip = in scope the child access the parent values but the parent cannot access the child values
 
 // if(true){
@@ -63,7 +61,6 @@
 // }
 // console.log(username); // same in this case give an error because of scope
 
-
 // Definition of Expression
 // let num = function(val){ // those function which can include inside in variable is called expression
 //     return val + 3
@@ -74,16 +71,28 @@
 // implicit mean if you cannot use the (return) keyword directly work this is implicit like below code
 
 // let addNum = (num1, num2) => num1 + num2; // in this time you are not using the Parentheses brackets
-// let addVal = (num3, num4) => (num3 + num4) // in this time you are using the Parantheses brackets but the output is same there is no error 
-
+// let addVal = (num3, num4) => (num3 + num4) // in this time you are using the Parantheses brackets but the output is same there is no error
 
 // IIFE (imediately invoked function)
 
 // we used IIFE for some reason some time the gloabal execution populate in our vaiable for removing this population we used IIFE
 
 (function username() {
-    console.log("Jus testing")
-    
+  // console.log("Jus testing")
 })(); // there is two paraentheses brackerts the first one is for function definiton and the second one is for function execution
-// Tip = use the statement terminator after fucntion execution in IIFE because js is not include a statment terminator by default in this method
+// Tip = use the statement terminator after function execution an IIFE because js is not include a statment terminator by default in this method
+
+let nums = [
+  1,
+  2,
+  3,
+  [4, 5, [6, 7, 8, [9, 10, 11, [12, 13, 14]]]],
+  [15, 16, [17, 18, 19]],
+];
+// console.log(nums);
+// console.log(...nums);
+
+let shopingCart = (...cart) => cart // implicit type
+console.log(shopingCart("Shoes", "Pants", "Shirts"));
+
 
