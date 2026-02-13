@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async 1</title>
+</head>
+<body>
+
+    <h1>I,m a <span id="changeText">Web Developer</span></h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+        let startBtn = document.getElementById("start")
+        let stopBtn = document.getElementById("stop")
+
+        startBtn.addEventListener("click", () => {
+            console.log("started")
+            let start = function(){
+            let changeText = document.getElementById("changeText")
+            changeText.innerHTML = "Frontend Developer"
+        }
+        let startTime = setTimeout(start, 2000);
+         stopBtn.addEventListener("click", () => {
+        clearTimeout(startTime)
+        console.log("Stoped")
+        })
+    })
+       
+        
+    </script>
+</body>
+</html>
