@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+        .container{
+            width: 400px;
+            height: 400px;
+            border: 2px solid red;
+            box-shadow: 0 0 20px rgb(201, 53, 53);
+            border-radius: 10px;
+        }
+        .container .card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container .card .img img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .container .card .id, .name, .followers{
+            font-size: 30px;
+            padding: 5px;
+        }
+        span{
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="card">
+            <div class="img">
+                <img src="" alt="">
+            </div>
+            <div class="id">ID: <span></span>
+            </div>
+            <div class="name">Name: <span></span></div>
+            <div class="followers">Followers: <span></span></div>
+        </div>
+    </div>
+
+    <script>
+        const api = 'https://api.github.com/users/dev-zohaibkhan';
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', api)        
+        xhr.onreadystatechange = function(){
+            console.log(xhr.readyState);
+            if(xhr.readyState === 4){
+                const data = JSON.parse(this.responseText);
+                let img = document.querySelector(".img img");
+                let id = document.querySelector(".id span");
+                let name = document.querySelector(".name span");
+                let followers = document.querySelector(".followers span");
+                img.src = data.avatar_url;
+                id.textContent = data.id;
+                name.textContent = data.name;
+                followers.textContent = data.followers;
+            }
+        }
+        xhr.send()
+    </script>
+</body>
+</html>
